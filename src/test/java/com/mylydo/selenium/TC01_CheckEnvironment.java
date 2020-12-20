@@ -29,7 +29,13 @@ public class TC01_CheckEnvironment {
     }
 
     @Test
-    public void TC02_runEdge() {
+    public void TC03_runEdge() {
+        System.setProperty("webdriver.edge.driver","src/test/resources/webdrivers/msedgedriver");
+        driver = new EdgeDriver();
+        driver.get("https://www.facebook.com/");
+        driver.quit();
+    } @Test
+    public void TC04_runEdge() {
         System.setProperty("webdriver.edge.driver","src/test/resources/webdrivers/msedgedriver");
         driver = new EdgeDriver();
         driver.get("https://www.facebook.com/");
