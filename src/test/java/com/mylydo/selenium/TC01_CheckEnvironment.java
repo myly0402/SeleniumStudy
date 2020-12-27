@@ -34,8 +34,18 @@ public class TC01_CheckEnvironment {
         driver = new EdgeDriver();
         driver.get("https://www.facebook.com/");
         driver.quit();
-    } @Test
+    }
+
+    @Test
     public void TC04_runEdge() {
+        System.setProperty("webdriver.edge.driver","src/test/resources/webdrivers/msedgedriver");
+        driver = new EdgeDriver();
+        driver.get("https://www.facebook.com/");
+        driver.quit();
+    }
+
+    @Test
+    public void TC05_runEdge() {
         System.setProperty("webdriver.edge.driver","src/test/resources/webdrivers/msedgedriver");
         driver = new EdgeDriver();
         driver.get("https://www.facebook.com/");
